@@ -6,13 +6,13 @@ metadata:
   annotations:
     notifications.argoproj.io/subscribe.on-deployed.slack: alerts
     notifications.argoproj.io/subscribe.on-sync-failed.slack: alerts
-    notifications.argoproj.io/subscribe.on-sync-succeeded.slack: alerts
+#    notifications.argoproj.io/subscribe.on-sync-succeeded.slack: alerts
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   source:
-    repoURL: https://github.com/antonputra/lesson-179.git
+    repoURL: https://github.com/mkdir-tom/web-service.git
     targetRevision: HEAD
     path: nginx
   destination:

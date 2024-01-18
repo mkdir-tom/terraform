@@ -14,3 +14,5 @@ resource "helm_release" "argocd" {
 
   values = [file("values/argocd.yaml")]
 }
+
+#get password kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
